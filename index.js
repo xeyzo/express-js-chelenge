@@ -46,6 +46,27 @@ app.post('/', async (req, res) => {
     res.redirect('/')
 })
 
+//router.post('/',
+//  [
+//    check('name')
+//      .isLength({ min: 1 })
+//      .withMessage('Please enter a name'),
+//    check('description')
+//      .isLength({ min: 1 })
+//      .withMessage('Please enter an email'),
+//  ],
+//  (req, res) => {
+//    const errors = validationResult(req);
+
+//    if (errors.isEmpty()) {
+//      res.send('succes');
+//    } else {
+//      res.render('todo', {
+//        title: 'Registration form',
+//        errors: errors.array(),
+//        data: req.body,.
+//  });
+
 
 
 app.get("/:id?/del", async (req, res) => {

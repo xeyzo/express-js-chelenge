@@ -4,7 +4,6 @@ mongoose.connect('mongodb://localhost:27017/todo', {
     useUnifiedTopology: true
 });
 
-// Koneksi
 const db = (async () => {
     const db = mongoose.connection;
     db.on('error', console.error.bind(console, 'Connection error!'));

@@ -8,6 +8,6 @@ const taskSchema = new Schema({
         type: Boolean,
         default: false
     }
-}, {collection: 'tasks'});
+}, {collection: 'todo'});
 
 module.exports = mongoose.model('todoModel', taskSchema);

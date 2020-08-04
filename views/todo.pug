@@ -4,7 +4,7 @@ block content
     .col-12
         hr
         h1 
-          Left Todo List APP
+          Left TODO LIST APP
         hr
         hr
     .col-12
@@ -14,7 +14,7 @@ block content
             label(for = 'name') New task
             input(id = 'name' type='text' class="form-control mb-3" name="name" placeholder="Task")
           .col
-            label(for = 'des') Add task
+            label(for = 'des') New description
             input(id='des' type='text' class="form-control mb-3" name="description" placeholder="Description")
           button(type="submit" class="btn btn-primary") Send
 
@@ -23,12 +23,12 @@ block content
       h3 Data List
       table(class="table table-borderless")
           tr
-            th No
-            th#nama Todo
-            th#des Description
-            th#status Status
-            th#editstatus Status
-            th#aksi Action
+            td No
+            td#nama Todo
+            td#des Description
+            td#status Status 
+            td#editstatus Status
+            td#aksi Delete
         
           each to,i in todo
             .row
@@ -50,8 +50,6 @@ block content
                       a(href=`/${to._id}/undone` role="button")
                         i.fas.fa-undo
                   td
-                    a(style="align: left" href=`/detail/${to._id}` role="button")
-                      i.fas.fa-search-plus
                     span  
                     a(href=`/${to._id}/del` role="button")
                       i.fas.fa-trash-alt
